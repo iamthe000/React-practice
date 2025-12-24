@@ -13,7 +13,11 @@ function App() {
   const handleClick = () => {
     //直接書き換えずに、更新関数を呼ぶ
     setMsg('Clicked');
-    setBM("BIG MESSAGE")
+    setBM("BIG MESSAGE");
+  };
+
+  const gotoFunc = () => {
+    test();
   };
 
   return (
@@ -23,6 +27,9 @@ function App() {
         <button onClick={handleClick} className="bg-black text-white p-2 rounded mb-7">
           {/*bg:背景 text:文字色 p:padding(1あたり4px) rounded:角丸*/}
           Click Me
+        </button>
+        <button onClick={gotoFunc} className='bg-black text-white p-2 rounded mb-7'>
+          test
         </button>
       </div>
       {/* 変数 Bigmsg の中身が表示される（自動で更新される) */}
@@ -35,6 +42,13 @@ function App() {
       <div id="msg">{msg}</div>
     </div>
   );
+}
+
+function test(){
+  return(
+    console.log("test")
+  );
+
 }
 
 export default App;
