@@ -40,6 +40,9 @@ export default function App() {
         placeholder="名前を入力..."
         value={inputValue}
         onChange={(e) => setInputValue(e.target.value)} // 入力されるたびに更新
+        //onChangeで何かがinput要素に入力されたことを認識、それがあるたびにこのコードが実行されることを示す。
+        //(e) =>でイベントオブジェクトと呼ばれる"e"を認識する。eには発生したイベントに関する情報が含まれている
+        //e.target.value　今行われたイベントの文字列を指す
         className="border-2 border-gray-300 p-2 rounded text-black focus:border-blue-500 outline-none"
       />
 
